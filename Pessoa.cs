@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace C__.Net.model
+namespace ExemploExplorando.model
 {
+
     public class Pessoa
     {
     public Pessoa()
@@ -17,6 +18,11 @@ namespace C__.Net.model
           Sobrenome = sobrenome;
         }
 
+        public void Deconstruct(out string nome, out string sobrenome)
+{
+    nome = Nome;
+    sobrenome = Sobrenome;    
+}
         private string _nome;
         private int _idade;
         private string _sobrenome;
@@ -57,5 +63,5 @@ namespace C__.Net.model
                 Console.WriteLine($"Nome: {NomeCompleto}, Idade: {Idade}");
             }
 
-    }
+        }
 }

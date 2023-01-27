@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace C__.Net.model
+namespace ExemploExplorando.model
 {
+
+
     public class Curso
     {
         public string Nome { get; set; }
@@ -33,7 +35,8 @@ namespace C__.Net.model
 
             for(int i = 0; i < Alunos.Count; i++){
                 
-                string texto = "Nº " + i + " - " + Alunos[i].NomeCompleto;
+             string texto = $"Nº {i + 1} - {Alunos[i].NomeCompleto}";
+             //   string texto = "Nº " + i + " - " + Alunos[i].NomeCompleto;
                 Console.WriteLine(texto);
             }
 
